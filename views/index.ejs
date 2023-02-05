@@ -4,9 +4,73 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/4eaa91a13e.js" crossorigin="anonymous"></script>  
   <title> <%= title %>  </title>
 </head>
 <body>
-  <h1>Probando a ver si funciona</h1>
+  <header>
+    <img src="images/logo.png" alt="logo">
+    <nav>
+      <li><a href="">Soporte</a></li>
+      <li><a href="">Infraestructura</a></li>
+      <li><a href="">Telecomunicaciones</a></li>
+      <li><a href="">Contacto</a></li>
+    </nav>
+  </header>
+  <main>
+    <div class="banner">
+      <img src="" alt="">
+      <h1>Even IT</h1>
+    </div>
+    <section>
+      <i class="fa-sharp fa-solid fa-circle-check"></i>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <i class="fa-sharp fa-solid fa-circle-check"></i>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <i class="fa-sharp fa-solid fa-circle-check"></i>
+      <p>Lorem ipsum dolor sit amet.</p>  
+    </section>
+    <section>
+      <img src="" alt="">
+      <h2>Soporte tecnico</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit ducimus repellat quidem omnis blanditiis! Repudiandae, molestias. Quidem error alias officia rem expedita soluta saepe, provident, iste temporibus deleniti odit laudantium!</p>
+    </section>
+    <section>
+      <img src="" alt="">
+      <h2>Infraestructura</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit ducimus repellat quidem omnis blanditiis! Repudiandae, molestias. Quidem error alias officia rem expedita soluta saepe, provident, iste temporibus deleniti odit laudantium!</p>
+    </section>
+    <section>
+      <img src="" alt="">
+      <h2>Telecomunicaciones</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit ducimus repellat quidem omnis blanditiis! Repudiandae, molestias. Quidem error alias officia rem expedita soluta saepe, provident, iste temporibus deleniti odit laudantium!</p>
+    </section>
+    <section>
+      <form action="" method="post">
+        <label for="name">Ingresa tu nombre
+          <input type="text" name="name" id="name" placeholder="Ej: Eduardo">
+        </label>
+        <label for="email">Ingresa tu email
+          <input type="email" name="email" id="email" placeholder="Ejemplo@evenit.com">
+        </label>
+        <label for="type">¿Sobre que te gustaria consultarnos?</label>
+          <select name="type" id="type">
+            <option value="" selected hidden>-Selecciona una opcion</option>
+            <option value="">Soporte tecnico</option>
+            <option value="">Infraestructura</option>
+            <option value="">Telecomunicaciones</option>
+            <option value="">Otros</option>
+          </select>
+        <label for="msg">Ingresa tu consulta
+          <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
+        </label>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+    <footer>
+      <p>© Sitio desarrollado poor Even It, Todos los derechos reservados</p>
+    </footer>
+
+  </main>
 </body>
 </html>
