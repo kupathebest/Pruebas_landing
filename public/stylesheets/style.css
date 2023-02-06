@@ -1,0 +1,103 @@
+:root{
+    --Azul : #112b52;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+li{
+    list-style: none;
+}
+
+header {
+    background-color: var(--Azul);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header div.logo{
+    width: 60%;
+    margin: 15px auto 30px;
+}
+
+header img{
+    width: 100%;
+}
+
+div.dropdown {
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid var(--Azul);
+    margin: 1px;
+    opacity: 0.8;
+    position: sticky;
+    top: 0;
+}
+
+div.dropdown a.contact{
+    color: black;
+}
+
+.nav-desktop{
+    display: none;
+}
+
+div.banner {
+    width: 100%;
+    background-color: black;
+    overflow: hidden;
+    position: relative;
+}
+
+div.banner img {
+    width: 100%;
+    opacity: 0.4;
+}
+
+div.banner h1 {
+    position: absolute;
+    top: 30px;
+    left: 37%;
+    color: white;
+    font-family: monospace;
+    white-space: nowrap;
+    width: 7ch;
+    overflow: hidden;
+}
+
+div.banner span {
+    position: absolute;
+    top: 100px;
+    left: 14%;
+    margin: auto;
+    text-align: center;
+    color: white;
+    font-family: monospace;
+    font-size: 20px;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 26ch;
+    animation: typing 4s steps(26), blink .5s infinite step-end alternate;
+    overflow: hidden;
+}
+
+@keyframes typing {
+    from {width: 0;}
+}
+
+@keyframes blink {
+    50% {border-color: transparent;}
+}

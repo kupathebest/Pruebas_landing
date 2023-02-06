@@ -1,49 +1,78 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://kit.fontawesome.com/4eaa91a13e.js" crossorigin="anonymous"></script>  
-  <title> <%= title %>  </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/4eaa91a13e.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="stylesheets/style.css">
+  <title>
+    <%= title %>
+  </title>
 </head>
+
 <body>
   <header>
-    <img src="images/logo.png" alt="logo">
-    <nav>
-      <li><a href="">Soporte</a></li>
-      <li><a href="">Infraestructura</a></li>
-      <li><a href="">Telecomunicaciones</a></li>
-      <li><a href="">Contacto</a></li>
-    </nav>
-  </header>
-  <main>
-    <div class="banner">
-      <img src="" alt="">
-      <h1>Even IT</h1>
+    <div class="logo">
+      <img src="images/logo.png" alt="logo">
     </div>
+  </header>
+  <div class="banner">
+    <img src="images/banner.jpg" alt="">
+    <h1>Even IT</h1>
+    <span>Soluciones personalizadas.</span>
+  </div>
+  <div class="dropdown">
+    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+      aria-expanded="false">
+      Nuestros servicios
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <li><a class="dropdown-item" href="#">Soporte</a></li>
+      <li><a class="dropdown-item" href="#">Infraestructura</a></li>
+      <li><a class="dropdown-item" href="#">Telecomunicaciones</a></li>
+    </ul>
+    <a class="contact " href="">Contacto</a>
+  </div>
+  <nav class="nav-desktop">
+    <li><a href="">Soporte</a></li>
+    <li><a href="">Infraestructura</a></li>
+    <li><a href="">Telecomunicaciones</a></li>
+    <li><a href="">Contacto</a></li>
+  </nav>
+
+  <main>
     <section>
       <i class="fa-sharp fa-solid fa-circle-check"></i>
       <p>Lorem ipsum dolor sit amet.</p>
       <i class="fa-sharp fa-solid fa-circle-check"></i>
       <p>Lorem ipsum dolor sit amet.</p>
       <i class="fa-sharp fa-solid fa-circle-check"></i>
-      <p>Lorem ipsum dolor sit amet.</p>  
+      <p>Lorem ipsum dolor sit amet.</p>
     </section>
     <section>
       <img src="" alt="">
       <h2>Soporte tecnico</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit ducimus repellat quidem omnis blanditiis! Repudiandae, molestias. Quidem error alias officia rem expedita soluta saepe, provident, iste temporibus deleniti odit laudantium!</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit ducimus repellat quidem omnis blanditiis!
+        Repudiandae, molestias. Quidem error alias officia rem expedita soluta saepe, provident, iste temporibus
+        deleniti odit laudantium!</p>
     </section>
     <section>
       <img src="" alt="">
       <h2>Infraestructura</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit ducimus repellat quidem omnis blanditiis! Repudiandae, molestias. Quidem error alias officia rem expedita soluta saepe, provident, iste temporibus deleniti odit laudantium!</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit ducimus repellat quidem omnis blanditiis!
+        Repudiandae, molestias. Quidem error alias officia rem expedita soluta saepe, provident, iste temporibus
+        deleniti odit laudantium!</p>
     </section>
     <section>
       <img src="" alt="">
       <h2>Telecomunicaciones</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit ducimus repellat quidem omnis blanditiis! Repudiandae, molestias. Quidem error alias officia rem expedita soluta saepe, provident, iste temporibus deleniti odit laudantium!</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit ducimus repellat quidem omnis blanditiis!
+        Repudiandae, molestias. Quidem error alias officia rem expedita soluta saepe, provident, iste temporibus
+        deleniti odit laudantium!</p>
     </section>
     <section>
       <form action="" method="post">
@@ -54,13 +83,13 @@
           <input type="email" name="email" id="email" placeholder="Ejemplo@evenit.com">
         </label>
         <label for="type">¿Sobre que te gustaria consultarnos?</label>
-          <select name="type" id="type">
-            <option value="" selected hidden>-Selecciona una opcion</option>
-            <option value="">Soporte tecnico</option>
-            <option value="">Infraestructura</option>
-            <option value="">Telecomunicaciones</option>
-            <option value="">Otros</option>
-          </select>
+        <select name="type" id="type">
+          <option value="" selected hidden>-Selecciona una opcion</option>
+          <option value="">Soporte tecnico</option>
+          <option value="">Infraestructura</option>
+          <option value="">Telecomunicaciones</option>
+          <option value="">Otros</option>
+        </select>
         <label for="msg">Ingresa tu consulta
           <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
         </label>
@@ -72,5 +101,9 @@
     </footer>
 
   </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
