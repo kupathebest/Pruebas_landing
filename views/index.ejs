@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Grayscale - Start Bootstrap Theme</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <title> <%- title %> </title>
+        <link rel="icon" type="image/x-icon" href="/images/Chirimbolo.png" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -28,22 +28,25 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#icons">icons</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#signup">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#icons">Info</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#signup">Contacto</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <!-- Masthead-->
         <header class="masthead">
-            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+            <div class="container px-6 px-lg-5 d-flex h-100 align-items-center justify-content-center">
                 <div class="d-flex justify-content-center">
                     <div class="text-center">
-                        <h1 class="mx-auto my-0 text-uppercase">Grayscale</h1>
-                        <h2 class="text-white-50 mx-auto mt-2 mb-5">A free, responsive, one page Bootstrap theme created by Start Bootstrap.</h2>
-                        <a class="btn btn-primary" href="#about">Get Started</a>
+                        <div class="d-flex mx-auto my-0 align-items-center">
+                            <img class="w-25"src="/images/Chirimbolo.png" alt="">
+                            <h1 class="text-uppercase">Even It</h1>
+                        </div>
+                        <h2 class="text-white-50 mx-auto mt-2 mb-5">Soluciones digitales al alcance de un click.</h2>
+                        <a class="btn btn-secondary" href="#about">Comenzar</a>
                     </div>
                 </div>
             </div>
@@ -138,44 +141,27 @@
         </section>
         <!-- Signup-->
         <section class="signup-section" id="signup">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5">
-                    <div class="col-md-10 col-lg-8 mx-auto text-center">
-                        <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-                        <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- * * SB Forms Contact Form * *-->
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- This form is pre-integrated with SB Forms.-->
-                        <!-- To make this form functional, sign up at-->
-                        <!-- https://startbootstrap.com/solution/contact-forms-->
-                        <!-- to get an API token!-->
-                        <form class="form-signup" id="contactForm" data-sb-form-api-token="API_TOKEN">
-                            <!-- Email address input-->
-                            <div class="row input-group-newsletter">
-                                <div class="col"><input class="form-control" id="emailAddress" type="email" placeholder="Enter email address..." aria-label="Enter email address..." data-sb-validations="required,email" /></div>
-                                <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton" type="submit">Notify Me!</button></div>
-                            </div>
-                            <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:required">An email is required.</div>
-                            <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:email">Email is not valid.</div>
-                            <!-- Submit success message-->
-                            <!---->
-                            <!-- This is what your users will see when the form-->
-                            <!-- has successfully submitted-->
-                            <div class="d-none" id="submitSuccessMessage">
-                                <div class="text-center mb-3 mt-2 text-white">
-                                    <div class="fw-bolder">Form submission successful!</div>
-                                    To activate this form, sign up at
-                                    <br />
-                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                                </div>
-                            </div>
-                            <!-- Submit error message-->
-                            <!---->
-                            <!-- This is what your users will see when there is-->
-                            <!-- an error submitting the form-->
-                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3 mt-2">Error sending message!</div></div>
+            <div class="container px-lg-5">
+                <div class="row gx-4 gx-lg-6">
+                    <div class="col-md-5 col-lg-8 mx-auto text-center">
+                        <i class="far fa-paper-plane fa-2x mb-4 text-white"></i>
+                        <h2 class="text-white mb-5">Dejanos tus datos para comunicarnos con vos</h2>
+                        <form action="" method="post">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label text-white">Nombre y apellido</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ej: Juan Perez">
+                              </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label text-white">Email</label>
+                                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ej: ejemplo@ejemplo.com">
+                              </div>
+                              <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label text-white">Dejanos tu comentario</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                              </div>
+                              <button type="submit" class="btn btn-secondary" disabled>Enviar</button>
                         </form>
+                        
                     </div>
                 </div>
             </div>
