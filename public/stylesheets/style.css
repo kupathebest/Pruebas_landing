@@ -711,6 +711,18 @@ progress {
   width: 33.3333333333%;
 }
 
+.tamanio {
+  width: 15%;
+}
+
+.altura {
+  height: 400px;
+}
+
+.margen {
+  margin-top: 10px;
+}
+
 .row-cols-4 > * {
   flex: 0 0 auto;
   width: 25%;
