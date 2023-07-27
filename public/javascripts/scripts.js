@@ -5,7 +5,140 @@
 */
 //
 // Scripts
-// 
+//
+
+const $ = id => document.getElementById(id);
+const regExEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+
+window.addEventListener('load', () => {
+
+    $('name').addEventListener('focus', () => {
+        if ($('name').value.trim() === "") {
+            $('name-error').innerText = "* El nombre es obligatorio"
+            $('name').classList.remove('input-success')
+            $('name').classList.add('input-error')
+            $('icono-error-name').classList.remove('ocultar')
+            $('icono-success-name').classList.add('ocultar')
+        }
+    })
+    $('name').addEventListener('blur', () => {
+
+        switch (true) {
+            case !$('name').value.trim():
+                $('name-error').innerText = "* El nombre es obligatorio"
+                $('name').classList.remove('input-success')
+                $('name').classList.add('input-error')
+                $('icono-error-name').classList.remove('ocultar')
+                $('icono-success-name').classList.add('ocultar')
+
+                break;
+            default:
+                $('name').classList.remove('input-error')
+                $('name').classList.add('input-success')
+                $('name-error').innerText = null
+                $('icono-error-name').classList.add('ocultar')
+                $('icono-success-name').classList.remove('ocultar')
+                break;
+        }
+    })
+    $('name').addEventListener('keydown', () => {
+        $('name').classList.remove('input-error')
+        $('name-error').innerText = null
+        $('icono-error-name').classList.add('ocultar')
+    })
+
+    $('email').addEventListener('blur', async () => {
+
+        switch (true) {
+            case !regExEmail.test($('email').value):
+                $('email-error').innerText = "* Tiene que ser un email válido"
+                $('email').classList.remove('input-success')
+                $('email').classList.add('input-error')
+                $('icono-error-email').classList.remove('ocultar')
+                $('icono-success-email').classList.add('ocultar')
+                break;
+            case await emailVerify($('email').value):
+                $('email-error').innerText = "* El email ya está registrado"
+                $('email').classList.remove('input-success')
+                $('email').classList.add('input-error')
+                $('icono-error-email').classList.remove('ocultar')
+                $('icono-success-email').classList.add('ocultar')
+                break;
+            default:
+                $('email').classList.remove('input-error')
+                $('email').classList.add('input-success')
+                $('email-error').innerText = null
+                $('icono-error-email').classList.add('ocultar')
+                $('icono-success-email').classList.remove('ocultar')
+                break;
+        }
+    })
+
+    $('email').addEventListener('keydown', () => {
+        $('email').classList.remove('input-error')
+        $('email-error').innerText = null
+        $('icono-error-email').classList.add('ocultar')
+    })
+
+    $('message').addEventListener('blur', () => {
+        if(!$('message').value.trim()){
+            $('message-error').innerText = "* El mensaje es obligatorio"
+            $('message').classList.add('input-error')
+        }else{
+            $('message-error').innerText = null
+            $('message').classList.remove('input-error')
+        }
+    })
+
+    $('form-contact').addEventListener('submit', event => {
+        event.preventDefault();
+
+        let elementsForm = $('form-contact').elements;
+        
+        let error = false;
+
+        for (let i = 0; i < elementsForm.length - 1; i++) {
+            
+            if(!elementsForm[i].value){
+                elementsForm[i].classList.add('input-error')
+                error = true
+            }
+        }
+
+        for (let i = 0; i < elementsForm.length - 1; i++) {
+            
+            if(elementsForm[i].classList.contains('input-error')){
+                error = true
+            }
+        }
+
+        console.log(elementsForm[0].value)
+
+        if(!elementsForm[0].value){
+            $('name-error').innerText = "* El nombre es obligatorio"
+        }
+        if(!elementsForm[1].value){
+            $('phone-error').innerText = "* El telefono es obligatorio"
+        }
+        if(!elementsForm[2].value){
+            $('email-error').innerText = "* El email es obligatorio"
+        }
+        if(!elementsForm[3].value){
+            $('message-error').innerText = "* El mensaje es obligatorio"
+        }
+       
+
+        if(!error){
+            $('form-contact').submit()
+            Swal.fire(
+                'Muchas gracias por contactarnos!',
+                'Even It',
+                'success'
+              )
+        }
+    })
+
+})
 
 window.addEventListener('DOMContentLoaded', event => {
 
